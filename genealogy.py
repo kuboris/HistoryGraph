@@ -5,7 +5,7 @@ import pyTigerGraph
 tgcloud_host = "https://history.i.tgcloud.io"
 tgcloud_password = "pwd"
 # CHANGE FOR YOUR OWN GED FILE
-path = 'royal92.GED'
+path = 'datasets/royal92.ged'
 #############################################
 
 ## LOGIN

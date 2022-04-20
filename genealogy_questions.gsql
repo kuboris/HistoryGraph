@@ -70,4 +70,6 @@ results = SELECT s From start:s
 
 
 #### FOR PAGERANK FOLLOWING GSQL WERE USED
+# For best results mothers_descendant and fathers_descendant connections
+# should be used as connecting edges
 # https://github.com/tigergraph/gsql-graph-algorithms/blob/master/algorithms/Centrality/pagerank/global/unweighted/tg_pagerank.gsql

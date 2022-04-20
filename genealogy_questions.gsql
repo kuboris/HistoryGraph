@@ -1,0 +1,73 @@
+### FOLOWING FILE CONTAINS EXAMPLES OF INTERESTING QUESTIONS/QUERIES
+### OVER THE GENEALOGY DATASETS
+
+### GENEALOGY DATASET STATISCTICS
+### CODE INSPIRED BY EXAMPLES HERE: https://medium.com/@suobot.io/get-to-know-the-accumulators-in-gsql-in-tigergraph-through-sample-queries-1cddf5c5b2d6
+"""
+CREATE QUERY dataset_statistics(/* Parameters here */) FOR GRAPH genealogy {
+    SumAccum<FLOAT> @@n_persons;
+    SumAccum<FLOAT> @@n_mother_connections;
+    SumAccum<FLOAT> @@n_father_connections;
+    FLOAT kids_per_mother;
+    FLOAT kids_per_father;
+    start={person.*};
+    vertices = SELECT s FROM start:s ACCUM @@n_persons +=1;
+    edges = SELECT s FROM start:s - (mother_to)-> :t
+            ACCUM @@n_mother_connections += 1;
+    f_edges = SELECT s FROM start:s - (father_to)-> :t
+              ACCUM @@n_father_connections += 1;
+    PRINT @@n_persons;
+    # WE KNOW HOW MANY MOTHER CONNECTIONS WE HAVE
+    PRINT @@n_mother_connections;
+    # MOTHER RATIO
+    PRINT @@n_mother_connections/@@n_persons;
+    # WE KNOW HOW MANY FATHER CONNECTIONS WE HAVE
+    PRINT @@n_father_connections;
+    # FATHER RATIO
+    PRINT @@n_father_connections/@@n_persons;
+}
+"""
+
+
+#### MOST KIDS PER FATHER OR MOTHER WITH LIMIT
+"""
+CREATE QUERY most_kids(INT k) FOR GRAPH genealogy { 
+    SumAccum<FLOAT> @n_mother_kids;
+    SumAccum<FLOAT> @n_father_kids;
+    start={person.*};
+    result_mother = SELECT s FROM start:s -((mother_to):e)-> person:v
+                 ACCUM s.@n_mother_kids += 1
+                 ORDER BY s.@n_mother_kids DESC
+                 LIMIT k;
+    PRINT result_mother;
+    result_father = SELECT s FROM start:s -((father_to):e)-> person:v
+                 ACCUM s.@n_father_kids += 1
+                 ORDER BY s.@n_father_kids DESC
+                 LIMIT k;
+    PRINT result_father;
+}
+"""
+
+#### HISTOGRAM WITH AMOUNT KIDS PER FATHER OR MOTHER
+"""
+CREATE QUERY edge_histogram() FOR GRAPH genealogy
+{
+# Create a global MapAccum accumulator called histogram
+#
+  MapAccum<int, int> @@histogram;
+# start is a set that contains vertex type Person and
+# all the contributes in Person
+ 
+ start = {person.*}; 
+results = SELECT s From start:s
+            ACCUM @@histogram += (s.outdegree("mother_to") -> 1);
+ PRINT @@histogram;
+results = SELECT s From start:s
+            ACCUM @@histogram += (s.outdegree("father_to") -> 1);
+ PRINT @@histogram;
+}
+"""
+
+
+#### FOR PAGERANK FOLLOWING GSQL WERE USED
+# https://github.com/tigergraph/gsql-graph-algorithms/blob/master/algorithms/Centrality/pagerank/global/unweighted/tg_pagerank.gsql

@@ -1,9 +1,14 @@
 # HistoryGraph
+![Screenshot 2022-04-20 175416](https://user-images.githubusercontent.com/5594182/164273048-602a639c-0a06-4d8c-b513-8859eb74325f.png)
 
 ## Empower historians and public with novel approach to study of genealogy and ancestry
-**Contributers and Contact Information: Jana M. Jakub K. - see Devpost for contact**
+**Contributers and Contact Information:
 
-**Problem Statement addressed: see problem statement.md**
+Jana M. Jakub K. - see Devpost for contact**
+
+**Problem Statement addressed: see problem statement.md**:
+
+https://github.com/kuboris/HistoryGraph/blob/main/problem_statement.md
 
 **Description**: 
 

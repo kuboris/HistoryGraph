@@ -4,7 +4,7 @@
 ## Empower historians and public with novel approach to study of genealogy and ancestry
 **Contributers and Contact Information:
 
-Jana M. Jakub K. - see Devpost for contact**
+Jana M. Jakub K. - see Devpost submission for contact**
 
 **Problem Statement addressed: see problem statement.md**:
 

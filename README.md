@@ -37,14 +37,17 @@ Other additions:
    1) UK royal family dataset (~3 000 historical persons connected to UK royal family) Public source: https://webtreeprint.com/tp_famous_gedcoms.php
    2) Extensive royal families database (~58 000 historical persons) Available after registration: https://www.openicpsr.org/openicpsr/project/117045/version/V2/view
  - **Technology Stack**: 
-   - Main programming language used: PYTHON
-   - Libraries: pyTigerGraph - For communication 
+   - Main programming language used: Python
+   - Libraries: pyTigerGraph - For communication with TigerGraph
    - Tiger GraphStudio - For visualizations
  - **Visuals**: 
-   - Feel free to include other images or videos to better demonstrate your work.
+   - Queen Victoria PageRank graph![victoria_graph](https://user-images.githubusercontent.com/5594182/164274143-7c141da7-454a-4b61-8d62-529f02a5c0a2.png)
+
+   - Detection of cyclic relations in genealogy![cyclic examples](https://user-images.githubusercontent.com/5594182/164274230-e203ac7b-3452-4df3-902a-e10e76ef4774.png)
+   - Victoria connection paths to Henry II ![connection examples](https://user-images.githubusercontent.com/5594182/164274355-52fd035e-1c75-4758-8348-a4bf839af0c8.png)
+
 
 All examples can be repeated using the provided code. 
- - Link websites or applications if needed to demonstrate your work. 
 
 ## Dependencies
 

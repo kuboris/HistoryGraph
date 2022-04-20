@@ -1,5 +1,5 @@
-#GRAPH FOR BETTER UNDERSTANDING OF HISTORY
-###Help historians understand complex interpersonal historical relationships using graph database.
+# GRAPH FOR BETTER UNDERSTANDING OF HISTORY
+### Help historians understand complex interpersonal historical relationships using graph database.
  
 
 #X: Empower professional historians as well as general public with a novel approach to the study of genealogy and ancestral relations

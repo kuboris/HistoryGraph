@@ -4,7 +4,8 @@
 ## Empower historians and public with novel approach to study of genealogy and ancestry
 **Contributers and Contact Information:
 
-Jana M. Jakub K. - see Devpost submission for contact**
+Jana M. and Jakub K. - see Devpost submission for contact details**
+https://devpost.com/software/historygraph-graph-for-better-understanding-of-history
 
 **Problem Statement addressed: see problem statement.md**:
 

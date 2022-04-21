@@ -24,14 +24,63 @@ ancestral relations while reaching a more accurate understanding than would ever
 traditional database. We believe graph databases have a potential to be a game-changer for genealogy enabling researchers
 to attain a more precise understanding of the past allowing us to find new insights into the history and/or our own ancestors. 
 
-Our solution is enabling historians and users in a following 
+Our solution is enabling historians and users in a following ways:
 
-- Impactful in solving a real world problem 
-- Innovative use case of graph
-- Ambitious and complex graph
-- Applicable graph solution 
+### Impact:
+There are two main areas impacted by and benefiting from our solution.
 
-Other additions: 
+1) We provide professional historians with tools and queries allowing for a more complex 
+exploration of multi-generational ancestral relations than would ever be possible by means of traditional databases 
+currently at hand. We believe graph databases have a potential to be a game-changer for genealogy making research 
+easier, faster and able to achieve a more precise understanding of the past allowing us to find new insights into our 
+history and heritage.
+
+2) According to Precedence Research, the global genetic testing market size was valued at USD 8 billion in 2021. (https://www.globenewswire.com/news-release/2022/01/06/2362697/0/en/Genetic-Testing-Market-Size-to-Hit-USD-15-8-Billion-by-2030.html)
+As we mention in our presentation, genealogy research is becoming more and more popular with people from all backgrounds
+exploring their own family roots and heritage. Our solution is a perfect tool for them to organize the data sets they collect
+and visualize their findings.
+
+### Innovation:
+There are several points showing the innovativeness of our solution:
+
+1) We utilize TigerGraph to work with genealogical data in new ways which are not possible when using 
+traditional table format databases. TigerGraph allows us to process tens of thousands of records and achieve 
+deep analysis and insights across dozens of generations and hundreds of years. This is something that would take 
+a lot of time and effort to work out from traditional sources and would be even harder to visualize in a comprehensive way. 
+The fact that TigerGraph is able to achieve it quickly and easily shows that is a major innovation for genealogy researchers.
+
+2) We believe this is one of the first ever usages of advanced algorithms such as page-rank algorithm on the 
+genealogical historical data.
+
+3) We have created a well working GSQL schema that allows for an easy upload of genealogy data format.
+
+4) Our solution is open sourced and public, meaning it can be used and developed further by anyone.
+
+### Ambition:
+We tested our solution with the help of two different sets of historical data.
+our understanding is that these are the two biggest publicly available historical datasets. 
+1) UK royal family dataset (~3100 historical persons (vertex) connected to UK royal family (7488edges))
+Public source: https://webtreeprint.com/tp_famous_gedcoms.php (Best resource we found so far)
+2) Extensive royal families database (~58 000 historical persons)
+
+- We have created the schema for loading GED datasets with 4 types of edges and 1 type of vertexes with personal properties.
+- We have created queries with genealogical questions that users can immediately use to answer their questions.
+- We have provided code to run TigerGraph pathfinding algorithms on the genealogical datasets.
+- We have provided an example for running page-rank on genealogical databases.
+- We have tested the finding of connections between persons across hundreds of years: TigerGraph is able to handle 
+it without any issues.
+
+### Application
+
+Our solution is there for professional historians as well as amateur researchers, for universities, various research 
+organizations and associations focusing on different historical, genealogical or even genetic questions.
+The fact that TigerGraph is able to quickly and easily process tens of thousands of records and achieve 
+deep analysis and insights across dozens of generations and hundreds of years makes it a perfect research tool 
+for all of them. The comprehensive visualization in GraphStudio is another major help applicable throughout their research
+process. The solution is open sourced and public making it readily available to anyone as well as flexible enough for further 
+development and adaptation for various research needs.
+
+## Other additions: 
 
  - **Data**: 
    - Used two main public dataset. 
